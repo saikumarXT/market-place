@@ -1,0 +1,149 @@
+[33mcommit dab3181a05f23fcde401381196c35f67471976d1[m
+Author: Sai Patel <saikumaraggu6@gmail.com>
+Date:   Fri Nov 14 23:22:18 2025 +0530
+
+    data base created
+
+[1mdiff --git a/backend/dist/controllers/user.d.ts.map b/backend/dist/controllers/user.d.ts.map[m
+[1mindex a06628e..57c0f5e 100644[m
+[1m--- a/backend/dist/controllers/user.d.ts.map[m
+[1m+++ b/backend/dist/controllers/user.d.ts.map[m
+[36m@@ -1 +1 @@[m
+[31m-{"version":3,"file":"user.d.ts","sourceRoot":"","sources":["../../src/controllers/user.ts"],"names":[],"mappings":"AAEA,QAAA,MAAM,SAAS,4CAAS,CAAC;AAGzB,OAAM,EAAE,SAAS,EAAE,CAAA"}[m
+\ No newline at end of file[m
+[32m+[m[32m{"version":3,"file":"user.d.ts","sourceRoot":"","sources":["../../src/controllers/user.ts"],"names":[],"mappings":"AAEA,QAAA,MAAM,SAAS,4CAAS,CAAC;AAuBzB,OAAM,EAAE,SAAS,EAAE,CAAA"}[m
+\ No newline at end of file[m
+[1mdiff --git a/backend/dist/controllers/user.js b/backend/dist/controllers/user.js[m
+[1mindex 26e5795..c60cf86 100644[m
+[1m--- a/backend/dist/controllers/user.js[m
+[1m+++ b/backend/dist/controllers/user.js[m
+[36m@@ -1,4 +1,16 @@[m
+ import { Router } from "express";[m
+ const userRoute = Router();[m
+[32m+[m[32muserRoute.post('/signup', async (req, res) => {[m
+[32m+[m[32m});[m
+[32m+[m[32muserRoute.post('/signin', async (req, res) => {[m
+[32m+[m[32m});[m
+[32m+[m[32muserRoute.post('/product', async (req, res) => {[m
+[32m+[m[32m});[m
+[32m+[m[32muserRoute.get('/product', async (req, res) => {[m
+[32m+[m[32m});[m
+[32m+[m[32muserRoute.put('/product', async (req, res) => {[m
+[32m+[m[32m});[m
+[32m+[m[32muserRoute.delete('/product', async (req, res) => {[m
+[32m+[m[32m});[m
+ export { userRoute };[m
+ //# sourceMappingURL=user.js.map[m
+\ No newline at end of file[m
+[1mdiff --git a/backend/dist/controllers/user.js.map b/backend/dist/controllers/user.js.map[m
+[1mindex 2e57bcd..1d0c16e 100644[m
+[1m--- a/backend/dist/controllers/user.js.map[m
+[1m+++ b/backend/dist/controllers/user.js.map[m
+[36m@@ -1 +1 @@[m
+[31m-{"version":3,"file":"user.js","sourceRoot":"","sources":["../../src/controllers/user.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,SAAS,CAAC;AAEjC,MAAM,SAAS,GAAC,MAAM,EAAE,CAAC;AAGzB,OAAM,EAAE,SAAS,EAAE,CAAA"}[m
+\ No newline at end of file[m
+[32m+[m[32m{"version":3,"file":"user.js","sourceRoot":"","sources":["../../src/controllers/user.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,SAAS,CAAC;AAEjC,MAAM,SAAS,GAAC,MAAM,EAAE,CAAC;AAEzB,SAAS,CAAC,IAAI,CAAC,SAAS,EAAC,KAAK,EAAC,GAAG,EAAC,GAAG,EAAC,EAAE;AAEzC,CAAC,CAAC,CAAA;AACF,SAAS,CAAC,IAAI,CAAC,SAAS,EAAC,KAAK,EAAC,GAAG,EAAC,GAAG,EAAC,EAAE;AAEzC,CAAC,CAAC,CAAA;AACF,SAAS,CAAC,IAAI,CAAC,UAAU,EAAC,KAAK,EAAC,GAAG,EAAC,GAAG,EAAC,EAAE;AAE1C,CAAC,CAAC,CAAA;AACF,SAAS,CAAC,GAAG,CAAC,UAAU,EAAC,KAAK,EAAC,GAAG,EAAC,GAAG,EAAC,EAAE;AAEzC,CAAC,CAAC,CAAA;AACF,SAAS,CAAC,GAAG,CAAC,UAAU,EAAC,KAAK,EAAC,GAAG,EAAC,GAAG,EAAC,EAAE;AAEzC,CAAC,CAAC,CAAA;AAEF,SAAS,CAAC,MAAM,CAAC,UAAU,EAAC,KAAK,EAAC,GAAG,EAAC,GAAG,EAAC,EAAE;AAE5C,CAAC,CAAC,CAAA;AAGF,OAAM,EAAE,SAAS,EAAE,CAAA"}[m
+\ No newline at end of file[m
+[1mdiff --git a/backend/dist/db/db.d.ts b/backend/dist/db/db.d.ts[m
+[1mindex b14f615..599e999 100644[m
+[1m--- a/backend/dist/db/db.d.ts[m
+[1m+++ b/backend/dist/db/db.d.ts[m
+[36m@@ -1,2 +1,123 @@[m
+[31m-export {};[m
+[32m+[m[32mimport mongoose from "mongoose";[m
+[32m+[m[32mdeclare const userModel: mongoose.Model<{[m
+[32m+[m[32m    userName?: string | null;[m
+[32m+[m[32m    password?: string | null;[m
+[32m+[m[32m}, {}, {}, {}, mongoose.Document<unknown, {}, {[m
+[32m+[m[32m    userName?: string | null;[m
+[32m+[m[32m    password?: string | null;[m
+[32m+[m[32m}, {}, mongoose.DefaultSchemaOptions> & {[m
+[32m+[m[32m    userName?: string | null;[m
+[32m+[m[32m    password?: string | null;[m
+[32m+[m[32m} & {[m
+[32m+[m[32m    _id: mongoose.Types.ObjectId;[m
+[32m+[m[32m} & {[m
+[32m+[m[32m    __v: number;[m
+[32m+[m[32m}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {[m
+[32m+[m[32m    userName?: string | null;[m
+[32m+[m[32m    password?: string | null;[m
+[32m+[m[32m}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{[m
+[32m+[m[32m    userName?: string | null;[m
+[32m+[m[32m    password?: string | null;[m
+[32m+[m[32m}>, {}, mongoose.ResolveSchemaOptions<mongoose.DefaultSchemaOptions>> & mongoose.FlatRecord<{[m
+[32m+[m[32m    userName?: string | null;[m
+[32m+[m[32m    password?: string | null;[m
+[32m+[m[32m}> & {[m
+[32m+[m[32m    _id: mongoose.Types.ObjectId;[m
+[32m+[m[32m} & {[m
+[32m+[m[32m    __v: number;[m
+[32m+[m[32m}>>;[m
+[32m+[m[32mdeclare const productModel: mongoose.Model<{[m
+[32m+[m[32m    sellerId?: {[m
+[32m+[m[32m        prototype?: mongoose.Types.ObjectId | null;[m
+[32m+[m[32m        cacheHexString?: unknown;[m
+[32m+[m[32m        generate?: {} | null;[m
+[32m+[m[32m        createFromTime?: {} | null;[m
+[32m+[m[32m        createFromHexString?: {} | null;[m
+[32m+[m[32m        createFromBase64?: {} | null;[m
+[32m+[m[32m        isValid?: {} | null;[m
+[32m+[m[32m    } | null;[m
+[32m+[m[32m    title?: string | null;[m
+[32m+[m[32m    description?: string | null;[m
+[32m+[m[32m    price?: number | null;[m
+[32m+[m[32m    category?: string[] | null;[m
+[32m+[m[32m}, {}, {}, {}, mongoose.Document<unknown, {}, {[m
+[32m+[m[32m    sellerId?: {[m
+[32m+[m[32m        prototype?: mongoose.Types.ObjectId | null;[m
+[32m+[m[32m        cacheHexString?: unknown;[m
+[32m+[m[32m        generate?: {} | null;[m
+[32m+[m[32m        createFromTime?: {} | null;[m
+[32m+[m[32m        createFromHexString?: {} | null;[m
+[32m+[m[32m        createFromBase64?: {} | null;[m
+[32m+[m[32m        isValid?: {} | null;[m
+[32m+[m[32m    } | null;[m
+[32m+[m[32m    title?: string | null;[m
+[32m+[m[32m    description?: string | null;[m
+[32m+[m[32m    price?: number | null;[m
+[32m+[m[32m    category?: string[] | null;[m
+[32m+[m[32m}, {}, mongoose.DefaultSchemaOptions> & {[m
+[32m+[m[32m    sellerId?: {[m
+[32m+[m[32m        prototype?: mongoose.Types.ObjectId | null;[m
+[32m+[m[32m        cacheHexString?: unknown;[m
+[32m+[m[32m        generate?: {} | null;[m
+[32m+[m[32m        createFromTime?: {} | null;[m
+[32m+[m[32m        createFromHexString?: {} | null;[m
+[32m+[m[32m        createFromBase64?: {} | null;[m
+[32m+[m[32m        isValid?: {} | null;[m
+[32m+[m[32m    } | null;[m
+[32m+[m[32m    title?: string | null;[m
+[32m+[m[32m    description?: string | null;[m
+[32m+[m[32m    price?: number | null;[m
+[32m+[m[32m    category?: string[] | null;[m
+[32m+[m[32m} & {[m
+[32m+[m[32m    _id: mongoose.Types.ObjectId;[m
+[32m+[m[32m} & {[m
+[32m+[m[32m    __v: number;[m
+[32m+[m[32m}, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {[m
+[32m+[m[32m    sellerId?: {[m
+[32m+[m[32m        prototype?: mongoose.Types.ObjectId | null;[m
+[32m+[m[32m        cacheHexString?: unknown;[m
+[32m+[m[32m        generate?: {} | null;[m
+[32m+[m[32m        createFromTime?: {} | null;[m
+[32m+[m[32m        createFromHexString?: {} | null;[m
+[32m+[m[32m        createFromBase64?: {} | null;[m
+[32m+[m[32m        isValid?: {} | null;[m
+[32m+[m[32m    } | null;[m
+[32m+[m[32m    title?: string | null;[m
+[32m+[m[32m    description?: string | null;[m
+[32m+[m[32m    price?: number | null;[m
+[32m+[m[32m    category?: string[] | null;[m
+[32m+[m[32m}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{[m
+[32m+[m[32m    sellerId?: {[m
+[32m+[m[32m        prototype?: mongoose.Types.ObjectId | null;[m
+[32m+[m[32m        cacheHexString?: unknown;[m
+[32m+[m[32m        generate?: {} | null;[m
+[32m+[m[32m        createFromTime?: {} | null;[m
+[32m+[m[32m        createFromHexString?: {} | null;[m
+[32m+[m[32m        createFromBase64?: {} | null;[m
+[32m+[m[32m    
