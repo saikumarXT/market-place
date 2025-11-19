@@ -1,1 +1,1 @@
-{"version":3,"file":"user.d.ts","sourceRoot":"","sources":["../../src/controllers/user.ts"],"names":[],"mappings":"AAEA,QAAA,MAAM,SAAS,4CAAS,CAAC;AAuBzB,OAAM,EAAE,SAAS,EAAE,CAAA"}
+{"version":3,"file":"user.d.ts","sourceRoot":"","sources":["../../src/controllers/user.ts"],"names":[],"mappings":"AAMA,QAAA,MAAM,UAAU,4CAAW,CAAC;AA+G5B,OAAO,EAAE,UAAU,EAAE,CAAC"}

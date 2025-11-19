@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { userRoute } from './controllers/user.js';
+import { userRouter } from './controllers/user.js';
 import http from 'http';
 import { webSocketOnlineServer} from './sockets/socket.js'
 import mongoose from 'mongoose';
@@ -14,7 +14,7 @@ await mongoose.connect('mongodb+srv://sk:yZfHtxyFzU73NOXv@cluster0.3vp3tpw.mongo
 const server=http.createServer(app);
 webSocketOnlineServer(server);
 
-app.use('/user',userRoute);
+app.use('/api/v1/user',userRouter);
 server.listen(3000,()=>{
     console.log("http://localhost:3000")
 })

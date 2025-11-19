@@ -1,33 +1,42 @@
 import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "./button";
-
+import {ShoppingImage} from "../icons/shoppingImage.js";
 
 export function HeaderComponent() {
 const navigate=useNavigate();
 
   return (
     <div>
-    <div className="flex h-20 bg-green-500 items-center gap-">
-      <div className="ml-6">
-        <p className="font-extrabold font-sarif italic text-3xl text-white ">MARKET PLACE</p>
-        <p className=" text-lg font-bold  italic text-white ">a place where people exchange valuable</p>
+    <div className="flex h-16 mt-2 bg-green-500 items-center gap-">
+
+      <div className="flex ml-2">
+
+        <div><ShoppingImage/></div>
+
+        <div>
+        <p className="font-extrabold   text-2xl text-white "> MARKET PLACE</p>
+        <p className=" text-sm font-bold   text-white "> a place where people Resell Products </p>
+        </div>
         </div>
 
 
-        <div className="flex gap-3 ml-10">
-
-      <div className="text-white"><ButtonComponent onClick={()=>navigate('/fashion')}  text="Fashion" fontSize='lg' width='lg' /></div>
-      <div className="text-white mr-4"><ButtonComponent  onClick={()=>navigate('/vehiclepage')}  text="Vehicles" fontSize='lg' width='lg' /></div>
-      <div className="text-white  mr-4"><ButtonComponent onClick={()=>navigate('/electronicspage')}  text="Electronics" fontSize='lg' width='lg' /></div>
-      <div className="text-white"><ButtonComponent onClick={()=>navigate('/realestateage')}   text="RealEstate" fontSize='lg' width='lg' /></div>
+        <div className="flex  ">
+       <div className="text-white ml-4"><ButtonComponent onClick={()=>navigate('/home')}   text="Home" fontSize='lg' width='lg' /></div>
+      <div className="text-white ml-0"><ButtonComponent onClick={()=>navigate('/fashion')}  text="Fashion" fontSize='lg' width='lg' /></div>
+      <div className="text-white ml-1"><ButtonComponent  onClick={()=>navigate('/vehiclepage')}  text="Vehicles" fontSize='lg' width='lg' /></div>
+      <div className="text-white ml-6"><ButtonComponent onClick={()=>navigate('/electronicspage')}  text="Electronics" fontSize='lg' width='lg' /></div>
+      <div className="text-white ml-8"><ButtonComponent onClick={()=>navigate('/realestateage')}   text="RealEstate" fontSize='lg' width='lg' /></div>
+      
     </div>
 
 
-    <div className="ml-30 ml-auto text-white font-bold" >
-        <ButtonComponent text="Message" fontSize="md" width="lg" variant="final" height="md"/>
+    <div className=" flex ml-5 text-white font-bold" >
+      <div className="m-2 ml-2"><ButtonComponent onClick={()=>navigate('/message')} text="Messages" fontSize="md" width="md" variant="final" height="md"/></div>  
+      <div className="m-2"><ButtonComponent onClick={()=>navigate('/profile')} text="Profile" fontSize="md" width="md" variant="final" height="md"/>
     </div>
+    </div> 
     </div>
- 
+    
 
 
       </div>

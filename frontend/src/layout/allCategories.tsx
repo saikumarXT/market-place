@@ -1,8 +1,21 @@
+import Card from "../components/card"
 
 function AllCategories() {
   return (
     <div>
-       <p>AllCategories ||AllCategories||AllCategories ||FAllCategoriese ||AllCategories ||</p>
+      <div className="grid gap-6 grid-cols-3   ">
+     
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      <div><Card placeholder="send any message" width='lg' height="md" /></div>
+      </div>
     </div>
   )
 }

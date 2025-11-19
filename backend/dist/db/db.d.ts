@@ -37,9 +37,10 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
+    image?: string | null;
     description?: string | null;
     price?: number | null;
-    category?: string[] | null;
+    category?: string | null;
 }, {}, {}, {}, mongoose.Document<unknown, {}, {
     sellerId?: {
         prototype?: mongoose.Types.ObjectId | null;
@@ -51,9 +52,10 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
+    image?: string | null;
     description?: string | null;
     price?: number | null;
-    category?: string[] | null;
+    category?: string | null;
 }, {}, mongoose.DefaultSchemaOptions> & {
     sellerId?: {
         prototype?: mongoose.Types.ObjectId | null;
@@ -65,9 +67,10 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
+    image?: string | null;
     description?: string | null;
     price?: number | null;
-    category?: string[] | null;
+    category?: string | null;
 } & {
     _id: mongoose.Types.ObjectId;
 } & {
@@ -83,9 +86,10 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
+    image?: string | null;
     description?: string | null;
     price?: number | null;
-    category?: string[] | null;
+    category?: string | null;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
     sellerId?: {
         prototype?: mongoose.Types.ObjectId | null;
@@ -97,9 +101,10 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
+    image?: string | null;
     description?: string | null;
     price?: number | null;
-    category?: string[] | null;
+    category?: string | null;
 }>, {}, mongoose.ResolveSchemaOptions<mongoose.DefaultSchemaOptions>> & mongoose.FlatRecord<{
     sellerId?: {
         prototype?: mongoose.Types.ObjectId | null;
@@ -111,9 +116,10 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
+    image?: string | null;
     description?: string | null;
     price?: number | null;
-    category?: string[] | null;
+    category?: string | null;
 }> & {
     _id: mongoose.Types.ObjectId;
 } & {

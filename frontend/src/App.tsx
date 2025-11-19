@@ -1,12 +1,14 @@
 import './App.css'
 import { HeaderComponent } from './components/header';
 import { Footer } from './components/footer';
-import { Routes,BrowserRouter, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import AllCategories from './layout/allCategories';
 import Electronics from './layout/electronics';
 import HousesAndApartments from './layout/housesAndApartments';
 import Vehicles from './layout/vehicles';
 import Fashion from './layout/fashion';
+import Message from './layout/message';
+import { Profile } from './pages/profile';
 
 function App() {
 
@@ -16,15 +18,18 @@ function App() {
     <div>
     <HeaderComponent/>
 
-    <div className='m-20'>
-   
+    <div className='m-7'>
     <Routes>
         <Route path='/' element={<AllCategories/>}/>
         <Route path='/electronicspage' element={<Electronics/>}/>
         <Route path='/realestateage' element={<HousesAndApartments/>}/>
         <Route path='/vehiclepage' element={<Vehicles/>}/>
          <Route path='/fashion' element={<Fashion/>}/>
+          <Route path='/message' element={<Message/>}/>
+           <Route path='/home' element={<AllCategories/>}/>
+             <Route path='/profile' element={<Profile/>}/>
     </Routes>
+    
     </div>
 
     <Footer/> 

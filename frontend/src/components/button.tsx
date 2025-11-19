@@ -15,8 +15,8 @@ const variantClass={
 }
 
 const widthClass={
-    "sm":"w-14",
-    "md":"w-30",
+    "sm":"w-20",
+    "md":"w-24",
     "lg":"w-32"
 }
 
