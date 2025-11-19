@@ -33,7 +33,7 @@ const heightClass={
 
 
 
-const defaultClass=' h-8 font-sans font-bold ';
+const defaultClass=' rounded-sm h-8 font-sans font-bold ';
 
 export function ButtonComponent({text,height,fontSize,width,onClick,variant}:buttonProps){
 

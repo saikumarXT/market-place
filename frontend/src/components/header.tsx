@@ -7,7 +7,7 @@ const navigate=useNavigate();
 
   return (
     <div>
-    <div className="flex h-16 mt-2 bg-green-500 items-center gap-">
+    <div className="flex h-16  w-full mt-1 mb-8 bg-green-500 items-center gap-">
 
       <div className="flex ml-2">
 

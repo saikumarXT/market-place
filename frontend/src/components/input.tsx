@@ -6,17 +6,17 @@ interface inputProps{
     reference?:any
 }
 const widthClass={
-   "sm":"w-20",
-    "md":"w-24",
-    "lg":"w-80"
+   "sm":"w-16",
+    "md":"w-20",
+    "lg":"w-44"
 }
 const heightClass={
-     "sm":"h-10",
+     "sm":"h-9",
     "md":"h-12",
     "lg":"h-16"
 }
 
-const defaultClass="w-20 shadow border h-20"
+const defaultClass="w-20 pl-8 m-1 shadow border h-20"
 
 
 export  function InputComponent({placeholder,width,height,reference}:inputProps) {

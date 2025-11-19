@@ -1,10 +1,20 @@
+import { HeaderComponent } from "../components/header"
+import Card from '../components/card'
 
 function HousesAndApartments() {
-  return (
+   return<>
+  <HeaderComponent/>
     <div>
-      <p>||house and apartments||||house and apartments||||house and apartments||||house and apartments||||house and apartments||||house and apartments||||house and apartments||</p>
+      <div className="grid gap-6 m-8 mt-12 grid-cols-3  ">
+      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+      </div>
     </div>
-  )
+    </>
 }
 
 export default HousesAndApartments

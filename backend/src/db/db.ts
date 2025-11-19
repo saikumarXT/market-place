@@ -9,6 +9,7 @@ password:{type:String,unique:true},
 })
 
 const productCategories=['electronic','motorVehicles','fashion','realEstate']
+
 const product=new Schema({
 sellerId:ObjectId,
 title:String,
