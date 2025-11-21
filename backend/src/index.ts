@@ -6,7 +6,7 @@ import { webSocketOnlineServer} from './sockets/socket.js'
 import mongoose from 'mongoose';
 
 const app=express();
-app.use(express.json());
+app.use(express.json());        
 app.use(cors());
 
 await mongoose.connect('mongodb+srv://sk:yZfHtxyFzU73NOXv@cluster0.3vp3tpw.mongodb.net/market-place');

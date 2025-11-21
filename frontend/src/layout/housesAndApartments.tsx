@@ -1,17 +1,21 @@
 import { HeaderComponent } from "../components/header"
 import Card from '../components/card'
+import { productState } from "../atoms/dataAtom"
+import { useRecoilValue } from "recoil";
+
 
 function HousesAndApartments() {
+     const products=useRecoilValue(productState);
    return<>
   <HeaderComponent/>
     <div>
-      <div className="grid gap-6 m-8 mt-12 grid-cols-3  ">
-      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
-      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
-      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
-      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
-      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
-      <div><Card placeholder="send any message. . ." width='lg' height="md" /></div>
+          <div className="grid gap-6 m-8 mt-12 grid-cols-3  ">
+       {products.filter((p) => p.category==='realEstate')
+       .map(({title,description,price,url})=>{
+        return(
+          <Card title={title} url={url} description={description} width='lg' height='sm' price={price}  placeholder="send any message. . ."  />
+        )
+       })}
       </div>
     </div>
     </>

@@ -9,19 +9,20 @@ import Message from './layout/message';
 import { Profile } from './pages/profile';
 import { SigninPage} from './pages/signinPage';
 import {SignupPage} from './pages/signupPage';
+import { ProductLoader } from './loaders/productLoader';
+
+
 
 function App() {
 
-
   return (
     <>
-    <div>
-    <div className=' '>
+    
+      <ProductLoader/>
+
     <Routes>
-      
         <Route index element={<SignupPage/>} />
         <Route path='/signin' element={<SigninPage/>} />
-
         <Route path='/electronicspage' element={<Electronics/>}/>
         <Route path='/realestateage' element={<HousesAndApartments/>}/>
         <Route path='/vehiclepage' element={<Vehicles/>}/>
@@ -29,12 +30,8 @@ function App() {
         <Route path='/message' element={<Message/>}/>
         <Route path='/home' element={<AllCategories/>}/>
         <Route path='/profile' element={<Profile/>}/>
-
     </Routes>
     
-    </div>
-
-      </div>
     </>
   )
 }

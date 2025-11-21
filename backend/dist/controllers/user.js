@@ -43,12 +43,27 @@ userRouter.post("/signin", async (req, res) => {
         });
     }
 });
+userRouter.get('/profile', auth, async (req, res) => {
+    const userId = req.userId;
+    try {
+        const user = await userModel.findOne({ _id: userId });
+        res.status(200).json({
+            user
+        });
+        console.log(user);
+    }
+    catch (err) {
+        res.status(200).json({
+            message: err
+        });
+    }
+});
 userRouter.post("/products", auth, async (req, res) => {
     const userId = req.userId;
-    const { image, sellerId, title, description, price, category } = req.body;
+    const { img, title, description, price, category } = req.body;
     try {
         const postProduct = await productModel.create({
-            image,
+            img,
             sellerId: userId,
             title,
             description,

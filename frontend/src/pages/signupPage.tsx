@@ -14,6 +14,7 @@ const passwordRef=useRef<HTMLInputElement>();
 const navigate=useNavigate();
     
 async function signup(){
+    try{
         const userName=userRef.current?.value;
         const password=passwordRef.current?.value;
         console.log("username and password:",userName,password);
@@ -31,6 +32,10 @@ async function signup(){
     else{
         alert(res)
     }
+}
+catch(err){
+    alert(err)
+}
 
     }
 

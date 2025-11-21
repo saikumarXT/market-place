@@ -37,7 +37,7 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
-    image?: string | null;
+    img?: string | null;
     description?: string | null;
     price?: number | null;
     category?: string | null;
@@ -52,7 +52,7 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
-    image?: string | null;
+    img?: string | null;
     description?: string | null;
     price?: number | null;
     category?: string | null;
@@ -67,7 +67,7 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
-    image?: string | null;
+    img?: string | null;
     description?: string | null;
     price?: number | null;
     category?: string | null;
@@ -86,7 +86,7 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
-    image?: string | null;
+    img?: string | null;
     description?: string | null;
     price?: number | null;
     category?: string | null;
@@ -101,7 +101,7 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
-    image?: string | null;
+    img?: string | null;
     description?: string | null;
     price?: number | null;
     category?: string | null;
@@ -116,7 +116,7 @@ declare const productModel: mongoose.Model<{
         isValid?: {} | null;
     } | null;
     title?: string | null;
-    image?: string | null;
+    img?: string | null;
     description?: string | null;
     price?: number | null;
     category?: string | null;

@@ -8,12 +8,12 @@ userName:String,
 password:{type:String,unique:true},
 })
 
-const productCategories=['electronic','motorVehicles','fashion','realEstate']
+const productCategories=['electronic','vehicles','fashion','realEstate']
 
 const product=new Schema({
 sellerId:ObjectId,
 title:String,
-image:String,
+img:String,
 description:String,
 price:Number,
 category:{type:String, enum:productCategories}
