@@ -14,13 +14,6 @@ function AllCategories() {
 
   return<>
   <HeaderComponent/>
-  <UpdateCard  
-     title="bikr"
-     image='fdfd'
-     description="this is the duplicate description for the test the updatecard componet in side the all cartegories"
-     width="lg"
-     height="sm"
-     price={444} />
     <div>
       <div className="grid gap-6 m-8 mt-12 grid-cols-3">
       {products.map((p) => (

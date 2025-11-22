@@ -60,7 +60,7 @@ userRouter.get('/profile',auth,async(req,res)=>{
   res.status(200).json({
     user
   })
-  console.log(user);
+
 
 }catch(err){
   res.status(200).json({
@@ -111,7 +111,31 @@ userRouter.get("/products", auth, async (req, res) => {
   }
 });
 
-userRouter.put("/products", auth, async (req, res) => {
+userRouter.put("/products", auth, async (req, res) =>{
+const {editedProduct}=req.body;
+try{
+  const editProducts=await productModel.findByIdAndUpdate({_id:editedProduct._id},
+    {
+      title:editedProduct.title,
+      description:editedProduct.description,
+      price:editedProduct.price,
+      category:editedProduct.category,
+      img:editedProduct.img
+    }
+  )
+  if(editProducts){
+    res.status(200).send({
+      message:"product successfully updated"
+    })
+  }
+}
+
+catch(err){
+  res.status(500).json({
+    message:err
+  })
+}
+
 });
 
 userRouter.delete("/products", auth, async (req, res) => {

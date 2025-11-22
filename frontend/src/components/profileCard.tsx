@@ -22,9 +22,13 @@ export function ProfileCard(){
     },[])
 
     return(<>
-    <div>
-        <p className="bold font-serif">Profile-Name: {user}</p>
-        <p className="bold font-serif mt-5 ml-44">Add Products</p>
+    <div className="bold font-serif  bg-red-400">
+        <p >&nbsp;&nbsp;&nbsp;&nbsp;Profile-Name:&nbsp;{user} &nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp; Address: kukatpally,&nbsp; medchal, hyd, 50007 &nbsp;&nbsp;   || &nbsp;&nbsp;&nbsp;    mobile :972452554* </p>
+        <p></p>
+        <p></p>
+    </div>      
+    <div className="flex  border border-black w-full h-8 mt-1 justify-center ">
+       <p className="font-thin m-1  ">* Add NewProducts  *</p>
     </div>
     </>)
 }

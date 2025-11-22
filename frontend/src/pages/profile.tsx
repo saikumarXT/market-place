@@ -3,6 +3,8 @@ import { AddProduct } from "../components/addProduct"
 import { useRef } from "react"
 import axios from 'axios'
 import { useProductLoader } from "../loaders/productLoader"
+import { UpdateCard } from "../components/updateCard"
+import {HeaderComponent} from '../components/header'
 
 
 export  function Profile() {
@@ -57,18 +59,20 @@ export  function Profile() {
 
   return (
     <div>
+      <HeaderComponent/>
       <div>
         <div> <ProfileCard/> </div>
       </div>
-
-      <div>
-        <div className="flex ml-10 m-5 mt-2 justify-top border-8 shadow-lg p-5 w-96 ">
+           
+      <div className="border border-t-0 border-gray-500 w-screen  flex items-center justify-center">
+       
+        <div className="flex ml-10 m-5 mt-6 justify-top border-8 shadow-lg p-5 w-96 ">
         <AddProduct width='lg' descriptionReference={descriptionRef}  titleReference={titleRef} priceReference={priceRef} urlReference={imgRef} categoryReference={categoryRef} onClick={()=>addNewProduct()} height='sm' />
     </div>
       </div>
 
       <div>
-        delete and edit comp 
+        <UpdateCard/> 
       </div>
 
     </div>
