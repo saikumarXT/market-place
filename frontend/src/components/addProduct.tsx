@@ -8,8 +8,8 @@ interface addProductProps{
     titleReference?:any,
     descriptionReference?:any,
     priceReference?:any,
-    urlReference?:any
-
+    urlReference?:any,
+    categoryReference?:any
 }
 
 const widthClass={
@@ -29,7 +29,7 @@ const defaultClass='border m-2 rounded-sm pl-3'
 
 
 
-export function AddProduct({ titleReference,descriptionReference,priceReference,urlReference, onClick, width , height}:addProductProps){
+export function AddProduct({ titleReference,categoryReference,descriptionReference,priceReference,urlReference, onClick, width , height}:addProductProps){
 
     return<> 
         <div>
@@ -37,6 +37,7 @@ export function AddProduct({ titleReference,descriptionReference,priceReference,
             <input className={widthClass[width]+" "+ heightClass[height]+" "+ defaultClass}  ref={titleReference} placeholder='title' type="text" />
             <input ref={descriptionReference}  placeholder='description'  type="text" className={widthClass[width]+" "+ heightClass[height]+" "+ defaultClass} />
             <input ref={priceReference}  placeholder='price'  type="text" className={widthClass[width]+" "+ heightClass[height]+" "+ defaultClass} />
+             <input ref={categoryReference}  placeholder='category'  type="text" className={widthClass[width]+" "+ heightClass[height]+" "+ defaultClass}  />
             <input ref={urlReference}  placeholder='paste image url...'  type="text" className={widthClass[width]+" "+ heightClass[height]+" "+ defaultClass}  />
         </div>
         <div>

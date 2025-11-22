@@ -2,17 +2,25 @@ import { useRecoilValue } from "recoil"
 import Card from "../components/card"
 import { HeaderComponent } from "../components/header"
 import { productState } from "../atoms/dataAtom"
+import UpdateCard from "../components/updateCard"
 
 
 
 function AllCategories() {
   const products=useRecoilValue(productState);
-  console.log("products are:",products);
+  console.log("products are:",products); 
+  
+
+
   return<>
-
-
-
   <HeaderComponent/>
+  <UpdateCard  
+     title="bikr"
+     image='fdfd'
+     description="this is the duplicate description for the test the updatecard componet in side the all cartegories"
+     width="lg"
+     height="sm"
+     price={444} />
     <div>
       <div className="grid gap-6 m-8 mt-12 grid-cols-3">
       {products.map((p) => (

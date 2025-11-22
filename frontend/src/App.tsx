@@ -9,17 +9,15 @@ import Message from './layout/message';
 import { Profile } from './pages/profile';
 import { SigninPage} from './pages/signinPage';
 import {SignupPage} from './pages/signupPage';
-import { ProductLoader } from './loaders/productLoader';
+import { useProductLoader } from './loaders/productLoader';
 
 
 
 function App() {
-
+   const fetchFun=useProductLoader();
+    fetchFun();
   return (
     <>
-    
-      <ProductLoader/>
-
     <Routes>
         <Route index element={<SignupPage/>} />
         <Route path='/signin' element={<SigninPage/>} />

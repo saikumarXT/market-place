@@ -2,13 +2,16 @@ import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "./button";
 import {ShoppingImage} from "../icons/shoppingImage.js";
 
+
+
+
 export function HeaderComponent() {
 const navigate=useNavigate();
 
   return (
+    
     <div>
     <div className="flex h-16  w-full mt-1 mb-8 bg-green-500 items-center gap-">
-
       <div className="flex ml-2">
 
         <div><ShoppingImage/></div>

@@ -9,6 +9,7 @@ interface cardProps{
   width:"sm"|"md"|"lg",
   height:"sm"|"md"|"lg"
   reference?:any
+  onClick?:()=>void;
 }
 
 
