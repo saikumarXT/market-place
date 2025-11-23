@@ -13,9 +13,13 @@ import { useProductLoader } from './loaders/productLoader';
 
 
 
+
+
 function App() {
    const fetchFun=useProductLoader();
-    fetchFun();
+    
+   fetchFun();
+
   return (
     <>
     <Routes>

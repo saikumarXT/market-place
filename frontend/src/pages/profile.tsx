@@ -9,15 +9,16 @@ import {HeaderComponent} from '../components/header'
 
 export  function Profile() {
 
+
+
     const titleRef=useRef<HTMLInputElement>();
     const descriptionRef=useRef<HTMLInputElement>();
     const priceRef=useRef<HTMLInputElement>();
     const imgRef=useRef<HTMLInputElement>();
       const categoryRef=useRef<HTMLInputElement>();
     
-
     const fetchFUN = useProductLoader();
-
+    
 
       async function addNewProduct(){
 

@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 
 
+
 export function ProfileCard(){
-    const [user,setUser]=useState();
+    const [userData,setUserData]=useState();
 
 
     useEffect(()=>{
@@ -13,17 +14,20 @@ export function ProfileCard(){
                 authorization: "Bearer "+ localStorage.getItem('token')
             }
         })
-        const users=response.data.user;
-        setUser(users.userName);
-        console.log(users.userName);
+        const user=response.data.user;
+        setUserData(user.userName);
 
+        console.log(user.userName);
+        console.log(user._id);
+        localStorage.setItem("userId",user._id);
         }
+
         fetchProfile();
     },[])
 
     return(<>
     <div className="bold font-serif  bg-red-400">
-        <p >&nbsp;&nbsp;&nbsp;&nbsp;Profile-Name:&nbsp;{user} &nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp; Address: kukatpally,&nbsp; medchal, hyd, 50007 &nbsp;&nbsp;   || &nbsp;&nbsp;&nbsp;    mobile :972452554* </p>
+        <p >&nbsp;&nbsp;&nbsp;&nbsp;Profile-Name:&nbsp;{userData} &nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp; Address: kukatpally,&nbsp; medchal, hyd, 50007 &nbsp;&nbsp;   || &nbsp;&nbsp;&nbsp;    mobile :972452554* </p>
         <p></p>
         <p></p>
     </div>      
